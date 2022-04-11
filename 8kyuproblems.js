@@ -27,6 +27,7 @@ function makeNegative(num) {
 }
 /* Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
+
 Example Outputs:
 348597 => [7,9,5,8,4,3]
 0 => [0]
@@ -95,4 +96,60 @@ function check(a, x) {
 
   return a.includes(x)
    }
-   
+   /*It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+Return the average of the given array rounded down to its nearest integer.
+
+The array will never be empty.
+
+
+
+
+
+    First step figure out what the problem is asking :
+           -The question is asking to return a single number which will be the avg of grades coming from the given array
+           ex. [2,2,2,3,1] add the numbers in array and then divide by the number of array items to get avg and return it as a downward rounded avg
+
+     Second step: Plan a solution
+           - so i need to add all the array items together then divide by array length and then make sure its rounded down
+
+     Third step: Putting putting the peices of the puzzle together:
+           - I can use the array.reduce method which will do all the adding of each array item which will give me back the sum
+           - from there i just need divide the sum of the array by using array.length method which will give me the avg
+           - finally i ll return the avg using math.floor method to get teh downward rounded avg of marks
+   */
+   function getAverage(marks){
+  //TODO : calculate the downward rounded average of the marks array
+ let avg =marks.reduce((previousValue, currentValue) => (previousValue + currentValue),0
+
+);
+  return Math.floor(avg/marks.length)
+}
+// a cleaner way to write this would be
+
+function getAverage(marks){
+  return Math.floor(marks.reduce((previousValue, currentValue) => previousValue + currentValue) / marks.length); // same logic but all in one line
+}
+/* Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+Note: input will never be an empty string
+
+ First step figure out what the problem is asking :
+      - here the question is asking me given an array replace all the numbers less than 5 with "0" and any digits 5 and above with "1" and return the new array
+
+  Second step: Plan a solution
+      - use a loop to check each digit in the string, if the digit is less than 5 change that value to 0 and if 5 and greater change it to 1
+      - then i need to return the new string
+
+
+  Third step: Putting putting the peices of the puzzle together:
+      -lets create a new string first => use a for loop to iterate over each digit of the given string => then use a consitional to check if the number is less than 5 and if it is add 0 to new string we declared
+      and if it doesnt satisfy the condition add 1 to new string instead. after it loops through the string outside of our for loop we ll return the newly filled string
+
+*/
+function fakeBin(x){
+  let newStr = '' // declare new empty string to hold values
+  for(let i = 0; i < x.length; i++){ // for loop to iterate over each string  item passed in
+    x[i] < 5 ? newStr += 0 : newStr += 1; // condition to check and replace numbers based on logic defined in question
+  }
+}
