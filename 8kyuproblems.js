@@ -183,7 +183,37 @@ function monkeyCount(n) {
         }
         return arr // return new populated array 
       }
+/*
+Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+*/ 
+// Sum Numbers
+function sum (numbers) {
+    
+      return numbers.reduce((prev, curr )=> prev +curr,0) // use array.reduce method to return sum of array
+         
+  }
 
+  /*
+  Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+  */ 
+  function smash (words) {
+      let sentance =  words.join(" ")
+       return sentance
+    };
+
+/*
+Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number.
+*/
+function sumMix(x){
+  
+      // convert any string values to number values 
+     
+      
+     return x.reduce((prev, curr)=>Number(prev)+Number(curr),0  )
+    
+    }
 
 
 
