@@ -355,4 +355,17 @@ If the number has an integer square root, take this, otherwise square the number
    return Number.isInteger(sqrt)? sqrt : x*x;
  } )
 }
+/*
+You will be given a vector of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
 
+The returned value must be a string, and have "***" between each of its letters.
+
+You should not remove or add elements from/to the array. skipped  */
+
+/*Description:
+Make a simple function called greet that returns the most-famous "hello world!".*/
+
+// Write a function "greet" that returns "hello world!"
+function greet  (){
+  return "hello world!"
+}
