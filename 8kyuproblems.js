@@ -547,3 +547,28 @@ Looking for more, loop-restrained fun? Check out the other kata in the series: *
 function check(a, x) {
   return a.includes(x);
 }
+/*
+ Pair of gloves
+Winter is coming, you must prepare your ski holidays. The objective of this kata is to determine the number of pair of gloves you can constitute from the gloves you have in your drawer.
+
+Given an array describing the color of each glove, return the number of pairs you can constitute, assuming that only gloves of the same color can form pairs.*/
+
+function numberOfPairs(gloves)
+{
+  //My hands are freezing
+  //get array, check how many pairs there are by reducing to an obj with data of color: amount 
+  const glovesAmount = gloves.reduce((acc, curr)=> {
+    acc[curr] = (acc[curr]|| 0) + 1;
+    return acc;
+  }, {})
+  
+
+  let amount = 0;
+
+  for(color in glovesAmount){
+    amount+=Math.floor(glovesAmount[color] / 2)
+ }
+
+  return amount
+}
+   //return amount of pairs based on what was given in array 
